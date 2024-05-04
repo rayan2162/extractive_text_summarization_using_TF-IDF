@@ -1,6 +1,6 @@
 # Sentence Autocomplete
 
-## Building an Autocomplete System
+## 1. Building an Autocomplete System
 
 <https://thegrigorian.medium.com/building-an-autocomplete-system-bb3392284a5e>
 
@@ -17,7 +17,7 @@
 
 ---
 
-## Sentence Autocomplete Using Pytorch
+## 2. Sentence Autocomplete Using Pytorch
 
 <https://www.geeksforgeeks.org/sentence-autocomplete-using-pytorch/>
 
@@ -29,11 +29,12 @@
 
 ---
 
-## Sentence Autocomplete Using TensorFlow from Scratch
+## 3. Sentence Autocomplete Using TensorFlow from Scratch
 
 <https://www.geeksforgeeks.org/sentence-autocomplete-using-tensorflow-from-scratch/>
 
 1. Creating the model for Sentence Autocompletion
+        
         Step 1: Importing necessary libraries
         Step 2: Loading the dataset
         Step 3: Extracting text from the dataset
@@ -42,30 +43,33 @@
         Step 6: Building the model
         Step 7: Compiling and Training the Model
         Step 8: Sentence Autocomplete
+
 2. Creating the Flask website
 3. Step by Step Process for Deploying the project using Docker
 
 ---
 
-## N-gram
+## 4. N-gram
 
 <https://deepai.org/machine-learning-glossary-and-terms/n-gram>
 
-N-grams are contiguous sequences of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words, or base pairs according to the application.
+- N-grams are contiguous sequences of n items from a given sample of text or speech. 
 
-The concept of an n-gram is straightforward: it is a sequence of 'n' consecutive items. For instance, in the domain of text analysis, if 'n' is 1, we call it a unigram; if 'n' is 2, it is a bigram; if 'n' is 3, it is a trigram, and so on. The larger the value of 'n', the more context you have, but with diminishing returns on information gained versus computational expense and data sparsity.
+The items can be phonemes, syllables, letters, words, or base pairs according to the application.
 
 Consider the sentence "The quick brown fox jumps over the lazy dog." Here are some examples of n-grams derived from this sentence:
 
     Unigrams: "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"
+    
     Bigrams: "The quick", "quick brown", "brown fox", "fox jumps", "jumps over", "over the", "the lazy", "lazy dog"
+    
     Trigrams: "The quick brown", "quick brown fox", "brown fox jumps", "fox jumps over", "jumps over the", "over the lazy", "the lazy dog"
 
-As you can see, unigrams do not contain any context, bigrams contain a minimal context, and trigrams start to form more coherent and contextually relevant phrases.
+Unigrams do not contain any context, bigrams contain a minimal context, and trigrams start to form more coherent and contextually relevant phrases.
 
-- N-gram language models have limitations, particularly when dealing with longer contexts. They may struggle to capture complex language patterns and relationships that span beyond a few words. Additionally, they might face challenges when handling unseen or rare N-grams, leading to inaccurate predictions.
+### 4.1 Challenges with N-Grams
 
-### Challenges with N-Grams
+N-gram language models have limitations, particularly when dealing with longer contexts. They may struggle to capture complex language patterns and relationships that span beyond a few words. Additionally, they might face challenges when handling unseen or rare N-grams, leading to inaccurate predictions.
 
 While n-grams are a powerful tool, they come with their own set of challenges:
 
@@ -75,13 +79,13 @@ While n-grams are a powerful tool, they come with their own set of challenges:
 
     Context Limitation: N-grams have a fixed context window of 'n' items, which may not be sufficient to capture longer dependencies in the text.
 
-### Smoothing Techniques
+### 4.2 Smoothing Techniques
 
 To address data sparsity and improve the performance of n-gram models, various smoothing techniques are employed. These techniques adjust the probability distribution of n-grams to account for unseen or rare n-gram sequences. Some common smoothing techniques include: **Additive or Laplace smoothing**, **Good-Turing discounting**,**Backoff and interpolation methods**.
 
 ---
 
-## Introduction to N-gram
+## 5. Introduction to N-gram
 
 <https://youtu.be/hM49MPmakNI>
 
@@ -109,3 +113,21 @@ So, we use **Merkov Assumption**
 p(the| its water is so transparent that) instead of this we use P(the|that).
 or
 P(the| its water is so transparent that) instead of this we use P(the|transparent that)
+
+***This part isn't completed yet... Need to find more about this topic.**
+
+---
+## 6. Merkov Assumption (Basics of NLP: Text classification with Markov Assumption)
+
+<https://singhharsh246.medium.com/basics-of-nlp-text-classification-with-markov-assumption-415ce51ca62e>
+
+The Markov assumption states that,
+>The future state or event in a sequence depends only on the current state or event, and not on the past states or events.
+
+In other words, the future is assumed to be independent of the past given the present.
+
+In the context of text generation, the Markov assumption implies that the probability of observing a particular word in a sequence depends only on the preceding (before/previous) word/words.
+
+For example, in a first-order Markov model, the probability of a word is conditioned on the immediately preceding word. In a second-order Markov model, the probability of a word is conditioned on the two preceding words, and so on.
+
+**However, it is important to note that the Markov assumption oversimplifies the complexity of language and may not capture long-range dependencies or context that extends beyond a fixed window of words.**
