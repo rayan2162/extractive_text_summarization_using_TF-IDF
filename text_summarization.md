@@ -1,5 +1,8 @@
 # Text Summarization
 
+- Here from 1-4 articles uses pre-trained model just demonstrate the i/o via the pre-trained model
+- In 5th article a model is trained (**T5**'s Tiny Language Model).
+
 ## 0. Courses/learning
 
 <https://huggingface.co/learn/nlp-course/en/chapter7/5>
@@ -120,3 +123,9 @@ How to do text summarization
     3. Word tokenization
     4. Word-frequency table
     5. Summarization
+  
+## 5. Tiny Language Models: Summarising text at low latencies
+
+<https://medium.com/@ben.burtenshaw/tiny-language-models-summarising-text-at-low-latencies-c1fbab509673>
+
+Example of training Model for summarization.
