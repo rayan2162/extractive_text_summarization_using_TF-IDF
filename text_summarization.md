@@ -53,8 +53,8 @@
 
 There are two methods in text summarization method
       
-      1. Extractive
-      2. Abstractive
+  1. Extractive
+  2. Abstractive
 
 ### 2.1 Extractive Method
 
@@ -90,11 +90,11 @@ It is easier, yields naturally grammatical summarie that requires relatively lit
 
  The 3 key steps of doing this:
 
-    1. Construct an intermidieate representation. It works by computing TF metrics for each sentence in the given matrix.
-   
-    2. Scores the sentences based on the representation, assigining a vlaue to each sentences denoting the probability with which it will get picked up in the summary.
-   
-    3. Produces a summary based on the top K most important sentences. Some studies have used Latent Semantic Analysis(LSA) to identify semantically important sentences.
+1. Construct an intermidieate representation. It works by computing TF metrics for each sentence in the given matrix.
+
+2. Scores the sentences based on the representation, assigining a vlaue to each sentences denoting the probability with which it will get picked up in the summary.
+
+3. Produces a summary based on the top K most important sentences. Some studies have used Latent Semantic Analysis(LSA) to identify semantically important sentences.
 
 #### This paper proposed an extractive text summarization approach for fractual reports using deep learning model, exploring various features to improve the set of sequence selected for the summary
 
@@ -118,11 +118,30 @@ Abstractive summarization methods aim at producing summary by interpreting the t
 
 How to do text summarization
 
-    1. Text cleaning
-    2. Sentence tokenization
-    3. Word tokenization
-    4. Word-frequency table
-    5. Summarization
+   1. Text cleaning
+  
+  2. Sentence tokenization
+  
+  3. Word tokenization
+  
+  4. Word-frequency table
+  
+  5. Summarization
+
+**Summarization:**
+
+``` 
+from heapq import nlargest
+
+select_length = int(len(sentence_tokens)*0.3)
+select_lengthsummary = nlargest(select_length, sentence_scores, key = sentence_scores.get)
+
+summary
+
+final_summary = [word.text for word in summary]
+
+summary = ‘ ‘.join(final_summary)
+```
   
 ## 5. Tiny Language Models: Summarising text at low latencies
 
