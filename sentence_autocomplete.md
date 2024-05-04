@@ -21,11 +21,15 @@
 
 <https://www.geeksforgeeks.org/sentence-autocomplete-using-pytorch/>
 
-    1. Cleaning the text data for training the NLP model
-    2. Loading the dataset using PyTorch
-    3. Creating the LSTM model
-    4. Training an NLP model
-    5. Making inferences from the trained model
+1. Cleaning the text data for training the NLP model
+
+2. Loading the dataset using PyTorch
+
+3. Creating the LSTM model
+
+4. Training an NLP model
+
+5. Making inferences from the trained model
 
 ---
 
@@ -35,16 +39,24 @@
 
 1. Creating the model for Sentence Autocompletion
         
-        Step 1: Importing necessary libraries
-        Step 2: Loading the dataset
-        Step 3: Extracting text from the dataset
-        Step 4: Cleaning Text
-        Step 5: Text vectorization and One hot encoding
-        Step 6: Building the model
-        Step 7: Compiling and Training the Model
-        Step 8: Sentence Autocomplete
+Step 1: Importing necessary libraries
+        
+Step 2: Loading the dataset
+
+Step 3: Extracting text from the dataset
+
+Step 4: Cleaning Text
+        
+Step 5: Text vectorization and One hot encoding
+        
+Step 6: Building the model
+
+Step 7: Compiling and Training the Model
+
+Step 8: Sentence Autocomplete
 
 2. Creating the Flask website
+
 3. Step by Step Process for Deploying the project using Docker
 
 ---
@@ -59,11 +71,11 @@ The items can be phonemes, syllables, letters, words, or base pairs according to
 
 Consider the sentence "The quick brown fox jumps over the lazy dog." Here are some examples of n-grams derived from this sentence:
 
-    Unigrams: "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"
+**Unigrams:** "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"
     
-    Bigrams: "The quick", "quick brown", "brown fox", "fox jumps", "jumps over", "over the", "the lazy", "lazy dog"
+**Bigrams:** "The quick", "quick brown", "brown fox", "fox jumps", "jumps over", "over the", "the lazy", "lazy dog"
     
-    Trigrams: "The quick brown", "quick brown fox", "brown fox jumps", "fox jumps over", "jumps over the", "over the lazy", "the lazy dog"
+**Trigrams:** "The quick brown", "quick brown fox", "brown fox jumps", "fox jumps over", "jumps over the", "over the lazy", "the lazy dog"
 
 Unigrams do not contain any context, bigrams contain a minimal context, and trigrams start to form more coherent and contextually relevant phrases.
 
@@ -73,11 +85,11 @@ N-gram language models have limitations, particularly when dealing with longer c
 
 While n-grams are a powerful tool, they come with their own set of challenges:
 
-    Data Sparsity: As 'n' increases, the frequency of specific n-gram sequences decreases, leading to data sparsity issues. This can make it difficult for models to learn effectively from such sparse data.
+**Data Sparsity:** As 'n' increases, the frequency of specific n-gram sequences decreases, leading to data sparsity issues. This can make it difficult for models to learn effectively from such sparse data.
 
-    Computational Complexity: The number of possible n-grams increases exponentially with 'n', which can lead to increased computational costs and memory requirements.
+**Computational Complexity:** The number of possible n-grams increases exponentially with 'n', which can lead to increased computational costs and memory requirements.
 
-    Context Limitation: N-grams have a fixed context window of 'n' items, which may not be sufficient to capture longer dependencies in the text.
+**Context Limitation:** N-grams have a fixed context window of 'n' items, which may not be sufficient to capture longer dependencies in the text.
 
 ### 4.2 Smoothing Techniques
 
